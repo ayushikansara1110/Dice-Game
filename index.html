@@ -59,7 +59,7 @@
         var randomDiceImage1 = "dice" + randomNumber1 + ".png";
         var randomImageSrc1 = "new img/" + randomDiceImage1;
         var img1 = document.getElementById("im1");
-        img1.setAttribute("src", randomImageSrc1);
+        img1.setAttribute("src", randomDiceImage1);
 
         var m = Math.random()*6;
         var randomNumber2 = 1 + Math.floor(m);
@@ -67,7 +67,7 @@
         var randomDiceImage2 = "dice" + randomNumber2 + ".png";
         var randomImageSrc2 = "new img/" + randomDiceImage2;
         var img2 = document.querySelector("#im2");
-        img2.setAttribute("src", randomImageSrc2);
+        img2.setAttribute("src", randomDiceImage2);
 
         var heading = document.getElementById('hhh');
         if (randomNumber1 > randomNumber2)
