@@ -20,6 +20,7 @@
         .dice{
             font-family: 'Quicksand', sans-serif;
             display: inline-block;
+            justify-content: space-evenly;
             margin: 2rem;
             font-weight: bold;
             font-size: 1.4rem;
@@ -31,26 +32,34 @@
             font-size: 7rem;
             color: #4e97cc;
             text-shadow: 3px 2px rgba(124, 186, 236, 0.469);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .pewpew{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
         }
     </style>
     
     <title>Dice Game</title>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <h1 id="hhh">Refresh Me</h1>
-
-        <div class="dice">
-            <p>Player 1</p>
-            <img id="im1" src="" alt="image of player 1 dice">
-        </div>
-
-        <div class="dice">
-            <p>Player 2</p>
-            <img id="im2" src="" alt="image of player 2 dice">
-        </div>
-
+<div class="pewpew">
+    <div class="dice">
+        <p>Player 1</p>
+        <img id="im1" src="" alt="image of player 1 dice">
     </div>
+
+    <div class="dice">
+        <p>Player 2</p>
+        <img id="im2" src="" alt="image of player 2 dice">
+    </div>
+</div>
+</div>
 
     <script>
         var n = Math.random()*6;
@@ -72,15 +81,15 @@
         var heading = document.getElementById('hhh');
         if (randomNumber1 > randomNumber2)
         {
-            heading.innerHTML = "✨Player 1 wins!!";
+            heading.innerHTML = "✨ Player 1 wins!!";
         }
         if (randomNumber1 < randomNumber2)
         {
-            heading.innerHTML = "✨Player 2 wins!!";
+            heading.innerHTML = "✨ Player 2 wins!!";
         }
         if (randomNumber1 === randomNumber2)
         {
-            heading.innerHTML = "It's a draw! Try again(ง •_•)ง";
+            heading.innerHTML = "It's a draw! Try again (ง •_•)ง";
         }
 
     </script>
